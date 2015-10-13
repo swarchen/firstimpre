@@ -86,12 +86,14 @@
   function getFriend() {
   	console.log('Get getFriend!');
   	FB.api(
-    "/me/friends",
+    "...?fields={fieldname_of_type_UserTaggableFriend}",
     function (response) {
       if (response && !response.error) {
-        console.log(response)      }
+        document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!' + response.picture;
+      }
     }
-);
+	);  
   }
 </script>
 
