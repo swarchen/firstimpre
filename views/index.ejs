@@ -89,8 +89,8 @@
     "...?fields={fieldname_of_type_UserTaggableFriend}",
     function (response) {
       if (response && !response.error) {
-        document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!' + response.picture;
+      	console.log(response);
+        console.log('name' + response.name + 'pic' + response.picture);
       }
     }
 	);  
